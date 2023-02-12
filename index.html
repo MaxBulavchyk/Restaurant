@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap"
+		rel="stylesheet">
+	<title>Restaurant</title>
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+</head>
+
+<body id="body" onclick="_overflow">
+	<div class="container">
+		<div class="main-screen-wrapper wrapper">
+			<header class="header">
+				<a href="#" class="header__logo">
+					<img src="./img/logo.png" alt="Logo">
+				</a>
+				<div class="header__burger">
+					<span id="icon-menu" onclick="navToggle()" class="material-icons _active">
+						menu
+					</span>
+				</div>
+				<nav id="nav" class="header-nav">
+					<ul class="header-nav__ul">
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a _active" onclick="navClose()">ГЛАВНАЯ</a>
+						</li>
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a _active" onclick="navClose()">МЕНЮ</a>
+						</li>
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a _active" onclick="navClose()">О НАС</a>
+						</li>
+						<li class="header-nav__li">
+							<a href="#" class="header-nav__a _active" onclick="navClose()">БРОНЬ</a>
+						</li>
+						<li class="header-nav__li">
+							<img src="./img/icons/cart.png" alt="cart">
+						</li>
+						<li class="header-nav__li booking">
+							<div class="header-nav__info">
+								<div class="header-nav__phone">
+									<img class="header-nav__img" src="./img/icons/phone.svg" alt="phone">
+									<p class="header-nav__phone-number">+999-888-76-54</p>
+								</div>
+								<p class="header-nav__desc">Свяжитесь с нами для бронирования</p>
+							</div>
+							<a href="#" class="btn header-nav__btn" onclick="navClose()">ЗАКАЗ СТОЛИКА</a>
+						</li>
+					</ul>
+					<span id="icon-close" onclick="navToggle()" class="material-icons">
+						close
+					</span>
+				</nav>
+			</header>
+			<div class="main-screen">
+				<h1 class="main-screen__title">Добро пожаловать в <span>Наш ресторан</span></h1>
+			</div>
+		</div>
+
+
+
+		<script src="script.js"></script>
+</body>
+
+</html>
