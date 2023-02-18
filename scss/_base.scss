@@ -1,63 +1,94 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: $font;
-  color: $color-body;
+    font-family: $font;
+    color: $color-body;
 }
 html,
 body {
-  &._overflow {
-    overflow: hidden;
-  }
+    &._overflow {
+        overflow: hidden;
+    }
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 p {
-  margin: 0;
+    margin: 0;
 }
-h1, h2, h3, h4 {
-  padding: 0;
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
 }
-a {
-  color: $color-white;
-  text-decoration: none;
+h1 {
+    @include text($font-secondary, 400, 80px, 92px, $color-text-fourth);
+    @include mobile {
+        @include text($font-secondary, 400, 40px, 46px, $color-text-fourth);
+    }
+}
+
+h2 {
+    @include text ($font-secondary, 400, 54px, 62px, $color-black);
+    span {
+        @include text ($font-secondary, 400, 54px, 62px, $color-text-fifth);
+        @include mobile {
+            @include text ($font-secondary, 400, 40px, 46px, $color-text-fifth);
+        }
+    }
+    @include mobile {
+        @include text ($font-secondary, 400, 40px, 46px, $color-black);
+    }
+}
+ul {
+    margin: 0;
 }
 li {
-  list-style: none;
+    list-style: none;
+}
+a {
+    color: $color-white;
+    text-decoration: none;
 }
 img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .container {
-  max-width: 1480px;
-  width: 100%;
-  margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 }
 .wrapper {
-  max-width: 1169px;
-  width: 100%;
-  margin: 0 auto;
+    max-width: 1169px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
 }
+
+.header-backgrond {
+    background: url("img/background1.jpg") 30% / cover no-repeat;
+}
+
 .btn {
-  padding: 15px 25px;
-  display: inline-block;
-  cursor: pointer;
-  border: 0;
-  background: $color-primary;
-  transition: $transition;
-  // &:hover {
-  //     outline: 1px solid $color-primary;
-  //     background: $color-container;
-  // }
+    @include text($font, 700, 14px, 19px, $color-white);
+    padding: 14px 18px;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background: $color-primary;
+    transition: $transition;
+    // &:hover {
+    //     outline: 1px solid $color-primary;
+    //     background: $color-container;
+    // }
 }
-
-
-
-

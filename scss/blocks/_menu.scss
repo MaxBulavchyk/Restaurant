@@ -1,0 +1,91 @@
+.menu {
+    background: url("img/menu.jpg") 50% / cover no-repeat;
+    &__wrapper {
+        padding: 100px 20px 135px;
+        @include tablet-small {
+            padding: 60px 20px 106px;
+        }
+    }
+
+    &__title {
+        @include text($font-secondary, 400, 54px, 62px, $color-white);
+        text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        margin-bottom: 138px;
+        @include tablet-small {
+            margin-bottom: 98px;
+        }
+    }
+}
+
+.item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 138px;
+    @include tablet {
+        margin-bottom: 0;
+    }
+    &__block {
+        position: relative;
+        padding: 80px 62px 29px;
+        background: $color-white;
+    }
+
+    &__recommended {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include text($font, 400, 13px, 18px, $color-black);
+        padding: 7px 12px;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        background: $color-text-fifth;
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 50%;
+        margin-bottom: 22px;
+    }
+
+    &__circle {
+        position: absolute;
+        padding: 34px 29px;
+        border: 7px solid #ffffff;
+        border-radius: 50%;
+        background: $color-text-fifth;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__price {
+        @include text($font-third, 400, 30px, 33px, $color-white);
+    }
+
+    &__title {
+        @include text($font-secondary, 400, 26px, 30px, $color-black);
+        text-align: center;
+        margin-bottom: 17px;
+    }
+
+    &__desc {
+        @include text($font, 400, 16px, 22px, $color-black);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        @include text($font, 700, 16px, 22px, $color-white);
+        padding: 14px 68px;
+        white-space: nowrap;
+        display: inline-block;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        background: $color-text-fifth;
+        transition: $transition;
+    }
+}

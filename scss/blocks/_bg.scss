@@ -1,0 +1,51 @@
+.bg {
+        background: url("img/background2.jpg") 50% / cover no-repeat;
+        margin-bottom: 132px;
+        @include mobile {
+            margin-bottom: 50px;
+        }
+    &__wrapper {
+        padding: 80px 20px 104px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+            gap: 20px;
+        }
+        @include tablet-small {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 50px;
+        }
+        @include mobile {
+            padding: 20px 15px 30px;
+        }
+    }
+
+    &__info {
+
+    }
+
+    &__title {
+        @include text ($font-secondary, 400, 52px, 60px, $color-text-fifth);
+        max-width: 601px;
+        margin-bottom: 20px;
+        @include tablet {
+            @include text ($font-secondary, 400, 42px, 50px, $color-text-fifth);
+        }
+        @include mobile {
+            @include text ($font-secondary, 400, 30px, 34px, $color-text-fifth);
+            max-width: 290px;
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+    }
+
+    &__decs {
+        @include text ($font, 700, 24px, 33px, $color-white);
+        @include mobile {
+            text-align: center;
+        }
+    }
+}
+

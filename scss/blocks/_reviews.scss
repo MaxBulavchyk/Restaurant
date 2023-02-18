@@ -1,0 +1,49 @@
+.reviews {
+    background: $color-body;
+    &__wrapper {
+        padding: 104px 0;
+        margin-bottom: 104px;
+        @include tablet-small {
+            margin-bottom: 70px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__desc {
+        @include text($font, 400, 20px, 27px, $color-black);
+        max-width: 900px;
+        text-align: center;
+        margin: 0 auto 20px;
+    }
+
+    &__image {
+        text-align: center;
+        border-radius: 50%
+        img {
+            border-radius: 50%
+        }
+    }
+
+    &__title {
+        @include text($font, 600, 20px, 27px, $color-black);
+        margin-bottom: 9px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        @include text($font, 400, 20px, 27px, $color-black);
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__circles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.slider {
+}

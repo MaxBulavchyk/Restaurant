@@ -1,0 +1,56 @@
+.history {
+    display: grid;
+    grid-template-columns: minmax(250px,444px) minmax(250px,539px);
+    gap: 125px;
+    margin-bottom: 122px;
+    @include tablet {
+        gap: 20px;
+    }
+    @include tablet-small {
+        grid-template-columns: 1fr;
+        margin-bottom: 50px;
+    }
+
+    &__info {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__title {
+        margin-bottom: 21px;
+    }
+
+    &__desc {
+        @include text ($font, 400, 16px, 22px, $color-text-third);
+        margin-bottom: 39px;
+        @include tablet-small {
+            max-width: 500px;
+            margin: 0 auto 39px auto;
+        }
+    
+    }
+
+    &__scroll {
+        display: flex;
+        justify-content: space-around;
+        @include tablet-small {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__quantity {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        @include text ($font, 400, 40px, 54px, $color-text-primary);
+        span {
+            @include text ($font, 400, 20px, 27px, $color-black);
+        }
+    }
+
+    &__images {
+        @include tablet-small {
+            margin: 0 auto;
+        }
+    }
+}

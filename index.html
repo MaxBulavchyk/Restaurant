@@ -18,8 +18,8 @@
 
 <body id="body" onclick="_overflow">
 	<div class="container">
-		<div class="main-screen-wrapper wrapper">
-			<header class="header">
+		<div class="header-backgrond">
+			<header class="header wrapper">
 				<a href="#" class="header__logo">
 					<img src="./img/logo.png" alt="Logo">
 				</a>
@@ -49,11 +49,11 @@
 							<div class="header-nav__info">
 								<div class="header-nav__phone">
 									<img class="header-nav__img" src="./img/icons/phone.svg" alt="phone">
-									<p class="header-nav__phone-number">+999-888-76-54</p>
+									<p class="header-nav__phone-number">+0800-888-76-54</p>
 								</div>
 								<p class="header-nav__desc">Свяжитесь с нами для бронирования</p>
 							</div>
-							<a href="#" class="btn header-nav__btn" onclick="navClose()">ЗАКАЗ СТОЛИКА</a>
+							<a href="#" class="btn" onclick="navClose()">ЗАКАЗ СТОЛИКА</a>
 						</li>
 					</ul>
 					<span id="icon-close" onclick="navToggle()" class="material-icons">
@@ -61,10 +61,205 @@
 					</span>
 				</nav>
 			</header>
-			<div class="main-screen">
-				<h1 class="main-screen__title">Добро пожаловать в <span>Наш ресторан</span></h1>
+
+			<div class="header-info wrapper">
+				<div class="header-info__block">
+					<p class="header-info__title">Добро пожаловать в
+					<h1>Наш ресторан</h1>
+					</p>
+					<p class="header-info__subtitle">ДОМ ЛУЧШЕЙ ЕДЫ</p>
+					<div class="header-info__btn btn">МЕНЮ</div>
+				</div>
 			</div>
 		</div>
+
+
+		<section class="intro wrapper">
+			<div class="intro__item">
+				<div class="intro__image">
+					<img src="./img/icons/plate.png" alt="plate">
+				</div>
+				<p class="intro__title">Магическая <span>Атмосфера</span></p>
+				<p class="intro__desc">В нашем заведении царит магическая атмосфера
+					наполненная вкусными ароматами
+				</p>
+			</div>
+			<div class="intro__item">
+				<div class="intro__image">
+					<img src="./img/icons/plate.png" alt="plate">
+				</div>
+				<p class="intro__title">Лучшее качество <span>Еды</span></p>
+				<p class="intro__desc">Качество нашей</p>
+				<p class="intro__desc">Еды - отменное!</p>
+			</div>
+			<div class="intro__item">
+				<div class="intro__image">
+					<img src="./img/icons/plate.png" alt="plate">
+				</div>
+				<p class="intro__title">Низкие <span>Цены</span></p>
+				<p class="intro__desc">Стоимость нашей Еды
+					зависит только от ее
+					количества. Качество
+					всегда на высоте!
+				</p>
+			</div>
+		</section>
+
+		<section class="history wrapper">
+			<div class="history__info">
+				<h2 class="history__title">Наша <span>История</span></h2>
+				<p class="history__desc">Как и у любого другого самобытного места, у нас есть своя, особая история. Идея
+					ресторана пришла основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана
+					застрял в сотнях километров от ближайшего населенного пункта. Вдали от цивилизации и связи им
+					пришлось навремя обустровать себе нехитрый быт, добывать и готовить себе еду.</p>
+				<div class="history__scroll">
+					<p class="history__quantity">93 <span>Напитки</span></p>
+					<div class="history__quantity">206 <span>Еда</span></div>
+					<div class="history__quantity">71 <span>Закуски</span></div>
+				</div>
+			</div>
+			<div class="history__images">
+				<img src="./img/images.jpg" alt="image">
+			</div>
+		</section>
+
+		<section class="bg">
+			<div class="bg__wrapper wrapper">
+				<div class="bg__info">
+					<h2 class="bg__title">Отпразднуйте в одном из самых лучших ресторанов.</h2>
+					<p class="bg__decs">Только в этом месяце бизнес-ланч от 250 грн</p>
+				</div>
+				<div class="btn">ЗАКАЗ СТОЛИКА</div>
+			</div>
+		</section>
+
+		<section class="offers wrapper">
+			<h2 class="offers__title">Наши <span>Блюда</span></h2>
+			<div class="offers__info">
+				<img class="offers__image" src="./img/dish1.jpg" alt="image">
+				<div class="offers__items">
+					<div class="offers__item">
+						<img src="./img/dish2.jpg" alt="image">
+						<div class="offers__desc-block">
+							<p class="offers__desc">Гамбургер мини</p>
+							<p class="offers__desc">80 грн</p>
+						</div>
+					</div>
+					<div class="offers__item">
+						<img src="./img/dish2.jpg" alt="image">
+						<div class="offers__desc-block">
+							<p class="offers__desc">Гамбургер мини</p>
+							<p class="offers__desc">80 грн</p>
+						</div>
+					</div>
+					<div class="offers__item">
+						<img src="./img/dish2.jpg" alt="image">
+						<div class="offers__desc-block">
+							<p class="offers__desc">Гамбургер мини</p>
+							<p class="offers__desc">80 грн</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="menu">
+			<div class="menu__wrapper wrapper">
+				<h2 class="menu__title">Наше меню</h2>
+				<div class="menu__item item">
+					<div class="item__block">
+						<div class="item__recommended">RECOMMENDED</div>
+						<div class="item__image">
+							<img src="./img/burger.jpg" alt="burger">
+							<div class="item__circle">
+								<p class="item__price">420</p>
+							</div>
+						</div>
+						<p class="item__title">Гамбургер макси</p>
+						<p class="item__desc">Максимально толстый слой мяса</p>
+						<div class="btn item__btn">ЗАКАЗАТЬ</div>
+					</div>
+					<div class="item__block">
+						<div class="item__image">
+							<img src="./img/burger.jpg" alt="burger">
+							<div class="item__circle">
+								<p class="item__price">420</p>
+							</div>
+						</div>
+						<p class="item__title">Гамбургер макси</p>
+						<p class="item__desc">Максимально толстый слой мяса</p>
+						<div class="btn item__btn">ЗАКАЗАТЬ</div>
+					</div>
+					<div class="item__block">
+						<div class="item__image">
+							<img src="./img/burger.jpg" alt="burger">
+							<div class="item__circle">
+								<p class="item__price">420</p>
+							</div>
+						</div>
+						<p class="item__title">Гамбургер макси</p>
+						<p class="item__desc">Максимально толстый слой мяса</p>
+						<div class="btn item__btn">ЗАКАЗАТЬ</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="reviews">
+			<div class="reviews__wrapper wrapper">
+				<div class="slider">
+					<div class="reviews__item">
+						<p class="reviews__desc">Я надолго запомню мой День рождения, проведённый в этом ресторане!
+							Кусочек родной Грузии!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем
+							рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в
+							Киев!!!</p>
+						<div class="reviews__image">
+							<img src="./img/user.svg" alt="user">
+						</div>
+						<p class="reviews__title">Посетитель</p>
+						<p class="reviews__subtitle">Николай</p>
+					</div>
+					<div class="reviews__circles">
+						<img src="./img/icons/slider-circle1.svg" alt="circle">
+						<img src="./img/icons/slider-circle1.svg" alt="circle">
+						<img src="./img/icons/slider-circle2.svg" alt="circle">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery wrapper">
+			<h2 class="gallery__title">Галерея <span>Блюд</span></h2>
+			<div class="gallery__content">
+				<div class="gallery__block">
+					<div class="gallery__image"><img src="./img/gallery1.jpg" alt="image"></div>
+					<div class="gallery__image"><img src="./img/gallery2.jpg" alt="image"></div>
+					<div class="gallery__image"><img src="./img/gallery3.jpg" alt="image"></div>
+				</div>
+				<div class="gallery__block">
+					<div class="gallery__image"><img src="./img/gallery2.jpg" alt="image"></div>
+					<div class="gallery__image"><img src="./img/gallery3.jpg" alt="image"></div>
+					<div class="gallery__image"><img src="./img/gallery1.jpg" alt="image"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="chef wrapper">
+			<h2 class="chef__title">Наши <span>Повара</span></h2> 
+			<div class="chef__content">
+				<div class="chef__image"><img src="./img/cook1.jpg" alt="chef"></div>
+				<div class="chef__image"><img src="./img/cook2.jpg" alt="chef"></div>
+				<div class="chef__image"><img src="./img/cook3.jpg" alt="chef"></div>
+			</div>
+		</section>
+
+		<footer class="reservation">
+			<div class="reservation__img">
+				<img src="./img/background3.jpg" alt="image">
+			</div>
+		</footer>
+
+	
 
 
 

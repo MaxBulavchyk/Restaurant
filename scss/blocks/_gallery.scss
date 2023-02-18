@@ -1,0 +1,27 @@
+.gallery {
+    margin-bottom: 100px;
+    @include tablet-small {
+        margin-bottom: 71px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__content {
+    }
+
+    &__block {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        @include tablet-small {
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        @include mobile {
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

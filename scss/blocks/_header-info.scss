@@ -1,0 +1,48 @@
+.header-info {
+    &__block {
+        display: inline-block;
+        text-align: center;
+        @include tablet-small {
+            display: block;
+        }
+    }
+
+    &__title {
+        @include text ($font-secondary, 400, 50px, 57px, $color-text-fourth);
+        @include mobile {
+            @include text ($font-secondary, 400, 30px, 34px, $color-text-fourth);
+        }
+    }
+
+    &__subtitle {
+        @include text ($font, 400, 18px, 25px, $color-white);
+        margin: 12px 0 21px 0;
+        &::before, &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 61px;
+            height: 2px;
+            background-color: $color-сircle;
+            position: relative;
+            @include mobile {
+                display: none;
+            }
+        }
+        &::after {
+            right: -8px;
+        }
+        &::before {
+            left: -8px;
+        }
+        @include mobile {
+            @include text ($font, 400, 15px, 20px, $color-white);
+        }
+    }
+
+    &__btn {
+        margin-bottom: 231px;
+    }
+}
+
+

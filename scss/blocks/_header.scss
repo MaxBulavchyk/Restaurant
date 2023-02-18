@@ -1,7 +1,3 @@
-.main-screen-wrapper {
-    background: url('img/background1.jpg') 50%/cover no-repeat;
-}
-
 .header{
     display: flex;
     justify-content: space-between;
@@ -9,7 +5,11 @@
     padding: 50px 20px;
     margin-bottom: 203px;
     &__logo {
-        @include text ($font, 700, 28px, 33px, $color-body);
+        img {
+            @include tablet {
+                max-width: 70%;
+            } 
+        }
     }
     &__burger {
         display: none;
@@ -18,6 +18,9 @@
             display: block;
         }
     }
+    @include tablet-small {
+        padding: 20px;
+    } 
 }
 .header-nav {
     .material-icons {
@@ -26,7 +29,7 @@
         @include tablet {
             display: block;
             position: absolute;
-            top: 70px;
+            top: 75px;
             right: 20px;
         }
     }
