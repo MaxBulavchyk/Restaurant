@@ -35,15 +35,15 @@ h1 {
 }
 
 h2 {
-    @include text ($font-secondary, 400, 54px, 62px, $color-black);
+    @include text($font-secondary, 400, 54px, 62px, $color-black);
     span {
-        @include text ($font-secondary, 400, 54px, 62px, $color-text-fifth);
+        @include text($font-secondary, 400, 54px, 62px, $color-text-fifth);
         @include mobile {
-            @include text ($font-secondary, 400, 40px, 46px, $color-text-fifth);
+            @include text($font-secondary, 400, 40px, 46px, $color-text-fifth);
         }
     }
     @include mobile {
-        @include text ($font-secondary, 400, 40px, 46px, $color-black);
+        @include text($font-secondary, 400, 40px, 46px, $color-black);
     }
 }
 ul {
@@ -78,8 +78,8 @@ img {
 }
 
 .btn {
-    @include text($font, 700, 14px, 19px, $color-white);
     padding: 14px 18px;
+    border-radius: 5px;
     white-space: nowrap;
     display: inline-block;
     cursor: pointer;
@@ -87,8 +87,8 @@ img {
     border: 0;
     background: $color-primary;
     transition: $transition;
-    // &:hover {
-    //     outline: 1px solid $color-primary;
-    //     background: $color-container;
-    // }
+    &:hover {
+        outline: 1px solid $color-primary;
+        background: none;
+    }
 }

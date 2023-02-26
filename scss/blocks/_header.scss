@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +8,7 @@
         img {
             @include tablet {
                 max-width: 70%;
-            } 
+            }
         }
     }
     &__burger {
@@ -20,7 +20,7 @@
     }
     @include tablet-small {
         padding: 20px;
-    } 
+    }
 }
 .header-nav {
     .material-icons {
@@ -59,7 +59,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         transform: translateX(-150%);
         transition: $transition;
         .header-nav__ul {
@@ -93,14 +93,10 @@
     }
 
     &__btn {
-        @include text($font, 700, 14px, 19px, $color-white);
         max-height: 47px;
     }
-
-    &__info {
-        @include tablet {
-            text-align: center;
-        }
+    &__link {
+        @include text($font, 700, 14px, 19px, $color-white);
     }
 }
 
@@ -115,5 +111,3 @@
         border-left: none;
     }
 }
-
-

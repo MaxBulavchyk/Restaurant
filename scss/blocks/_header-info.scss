@@ -1,4 +1,7 @@
 .header-info {
+    @include tablet {
+        text-align: center;
+    }
     &__block {
         display: inline-block;
         text-align: center;
@@ -42,6 +45,10 @@
 
     &__btn {
         margin-bottom: 231px;
+    }
+
+    &__link {
+        @include text($font, 700, 14px, 19px, $color-white);
     }
 }
 

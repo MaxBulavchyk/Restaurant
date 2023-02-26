@@ -19,7 +19,7 @@
 <body id="body" onclick="_overflow">
 	<div class="container">
 		<div class="header-backgrond">
-			<header class="header wrapper">
+			<header id="header" class="header wrapper">
 				<a href="#" class="header__logo">
 					<img src="./img/logo.png" alt="Logo">
 				</a>
@@ -31,19 +31,19 @@
 				<nav id="nav" class="header-nav">
 					<ul class="header-nav__ul">
 						<li class="header-nav__li">
-							<a href="#" class="header-nav__a _active" onclick="navClose()">ГЛАВНАЯ</a>
+							<a href="#header" class="header-nav__a _active" onclick="navClose()">ГЛАВНАЯ</a>
 						</li>
 						<li class="header-nav__li">
-							<a href="#" class="header-nav__a _active" onclick="navClose()">МЕНЮ</a>
+							<a href="#menu" class="header-nav__a _active" onclick="navClose()">МЕНЮ</a>
 						</li>
 						<li class="header-nav__li">
-							<a href="#" class="header-nav__a _active" onclick="navClose()">О НАС</a>
+							<a href="#history" class="header-nav__a _active" onclick="navClose()">О НАС</a>
 						</li>
 						<li class="header-nav__li">
-							<a href="#" class="header-nav__a _active" onclick="navClose()">БРОНЬ</a>
+							<a href="#reservation" class="header-nav__a _active" onclick="navClose()">БРОНЬ</a>
 						</li>
 						<li class="header-nav__li">
-							<img src="./img/icons/cart.png" alt="cart">
+							<a href="#menu"><img src="./img/icons/cart.png" alt="cart"></a>
 						</li>
 						<li class="header-nav__li booking">
 							<div class="header-nav__info">
@@ -53,7 +53,9 @@
 								</div>
 								<p class="header-nav__desc">Свяжитесь с нами для бронирования</p>
 							</div>
-							<a href="#" class="btn" onclick="navClose()">ЗАКАЗ СТОЛИКА</a>
+							<div class="header-nav__btn btn">
+								<a href="#reservation" class="header-nav__link" onclick="navClose()">ЗАКАЗ СТОЛИКА</a>
+							</div>
 						</li>
 					</ul>
 					<span id="icon-close" onclick="navToggle()" class="material-icons">
@@ -68,7 +70,9 @@
 					<h1>Наш ресторан</h1>
 					</p>
 					<p class="header-info__subtitle">ДОМ ЛУЧШЕЙ ЕДЫ</p>
-					<div class="header-info__btn btn">МЕНЮ</div>
+					<div class="header-info__btn btn">
+						<a href="#menu" class="header-info__link">МЕНЮ</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -105,7 +109,7 @@
 			</div>
 		</section>
 
-		<section class="history wrapper">
+		<section id="history" class="history wrapper">
 			<div class="history__info">
 				<h2 class="history__title">Наша <span>История</span></h2>
 				<p class="history__desc">Как и у любого другого самобытного места, у нас есть своя, особая история. Идея
@@ -129,7 +133,9 @@
 					<h2 class="bg__title">Отпразднуйте в одном из самых лучших ресторанов.</h2>
 					<p class="bg__decs">Только в этом месяце бизнес-ланч от 250 грн</p>
 				</div>
-				<div class="btn">ЗАКАЗ СТОЛИКА</div>
+				<div class="bg__btn btn">
+					<a href="#reservation" class="bg__link">ЗАКАЗ СТОЛИКА</a>
+				</div>
 			</div>
 		</section>
 
@@ -163,7 +169,7 @@
 			</div>
 		</section>
 
-		<section class="menu">
+		<section id="menu" class="menu">
 			<div class="menu__wrapper wrapper">
 				<h2 class="menu__title">Наше меню</h2>
 				<div class="menu__item item">
@@ -177,7 +183,9 @@
 						</div>
 						<p class="item__title">Гамбургер макси</p>
 						<p class="item__desc">Максимально толстый слой мяса</p>
-						<div class="btn item__btn">ЗАКАЗАТЬ</div>
+						<div class="btn item__btn">
+							<a href="#reservation" class="item__link">ЗАКАЗАТЬ</a>
+						</div>
 					</div>
 					<div class="item__block">
 						<div class="item__image">
@@ -188,7 +196,9 @@
 						</div>
 						<p class="item__title">Гамбургер макси</p>
 						<p class="item__desc">Максимально толстый слой мяса</p>
-						<div class="btn item__btn">ЗАКАЗАТЬ</div>
+						<div class="btn item__btn">
+							<a href="#reservation" class="item__link">ЗАКАЗАТЬ</a>
+						</div>
 					</div>
 					<div class="item__block">
 						<div class="item__image">
@@ -199,7 +209,9 @@
 						</div>
 						<p class="item__title">Гамбургер макси</p>
 						<p class="item__desc">Максимально толстый слой мяса</p>
-						<div class="btn item__btn">ЗАКАЗАТЬ</div>
+						<div class="btn item__btn">
+							<a href="#reservation" class="item__link">ЗАКАЗАТЬ</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -245,7 +257,7 @@
 		</section>
 
 		<section class="chef wrapper">
-			<h2 class="chef__title">Наши <span>Повара</span></h2> 
+			<h2 class="chef__title">Наши <span>Повара</span></h2>
 			<div class="chef__content">
 				<div class="chef__image"><img src="./img/cook1.jpg" alt="chef"></div>
 				<div class="chef__image"><img src="./img/cook2.jpg" alt="chef"></div>
@@ -253,13 +265,66 @@
 			</div>
 		</section>
 
-		<footer class="reservation">
-			<div class="reservation__img">
-				<img src="./img/background3.jpg" alt="image">
+		<footer id="reservation" class="reservation">
+			<div class="reservation__wrapper wrapper">
+				<h2 class="reservation__title">ЗАКАЗ СТОЛИКА</h2>
+				<div class="reservation__form">
+					<form action="#" method="get">
+						<div class="form__item">
+							<span>Укажите ваше имя</span>
+							<input placeholder="Имя" tabindex="1" name="username" type="text">
+						</div>
+						<!-- <div class="form__item">
+							<span>Укажите ваш Email</span>
+							<input placeholder="user@gmail.com" tabindex="2" name="useremail" type="email">
+						</div> -->
+						<div class="form__item">
+							<span>Укажите ваш номер телефона</span>
+							<input placeholder="+38 097 888 88 88" tabindex="3" name="usertel" type="tel">
+						</div>
+						<div class="form__item">
+							<span>Укажите день</span>
+							<input placeholder="Дата" tabindex="4" name="date" type="date">
+						</div>
+						<div class="form__item">
+							<span>Укажите время</span>
+							<input placeholder="Время" tabindex="5" name="time" type="time">
+						</div>
+						<div class="form__item">
+							<span>Располжение столика</span>
+							<select name="level">
+								<option value="level1" tabindex="6">Первый этаж</option>
+								<option value="level2" tabindex="7">Второй этаж</option>
+								<option value="level3" tabindex="8">Мансарда</option>
+							</select>
+						</div>
+						<!-- <div class="form__item checkbox">
+							<span>Дополнительно</span>
+							<div>
+								<input checked type="checkbox" tabindex="9" name="water">Вода
+							</div>
+							<div>
+								<input type="checkbox" tabindex="10" name="fruit">Фрукты
+							</div>
+							<div>
+								<input disabled type="checkbox" tabindex="11" name="champagne">Шампанское
+							</div>
+						</div> -->
+						<div class="form__item">
+							<span>Комментарии к заказу</span>
+							<textarea placeholder="Дополнительная информация для заказа столика" tabindex="12"
+								name="desc" cols="30" rows="3"></textarea>
+						</div>
+						<div class="form__buttons">
+							<button type="submit" tabindex="13">Отправить</button>
+							<button type="reset" tabindex="14">Очистить</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</footer>
 
-	
+
 
 
 
